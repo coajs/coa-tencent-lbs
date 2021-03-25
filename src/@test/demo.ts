@@ -1,31 +1,10 @@
-# coa-tencent-lbs
+// @ts-nocheck
+import { CoaTencentLbsBin, CoaTencentLbsService } from '..'
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/coa-tencent-lbs.svg?style=flat-square)](https://www.npmjs.org/package/coa-tencent-lbs)
-[![npm downloads](https://img.shields.io/npm/dm/coa-tencent-lbs.svg?style=flat-square)](http://npm-stat.com/charts.html?package=coa-tencent-lbs)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/coajs/coa-tencent-lbs/pulls)
+const redisCache = {} as any
 
-一个超简单的腾讯地图SDK for Node.js
-
-根据日常实际项目使用进行简单封装
-
-## 快速开始
-
-### 安装
-
-```shell
-yarn add coa-tencent-lbs
-```
-
-### 使用
-
-```typescript
-import { CoaTencentLbsBin, CoaTencentLbsService } from 'coa-tencent-lbs'
-
-// 初始化bin实例（依赖一个redisCache实例）
 const bin = new CoaTencentLbsBin('XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX', redisCache)
 
-// 根据bin实例创建服务实例
 const service = new CoaTencentLbsService(bin)
 
 // 逆地址解析（坐标位置描述）提供由经纬度到文字地址及相关位置信息的转换能力
@@ -43,4 +22,3 @@ await service.ipLocation('192.168.1.0')
 // 行政区划，提供中国标准行政区划数据
 // 详见 https://lbs.qq.com/service/webService/webServiceGuide/webServiceDistrict
 await service.districtList()
-```

@@ -1,0 +1,31 @@
+{
+  "name": "coa-tencent-lbs",
+  "version": "0.0.0",
+  "description": "tencent lbs component for coa",
+  "keywords": [
+    "coajs",
+    "coa",
+    "lbs"
+  ],
+  "license": "MIT",
+  "author": "Aex",
+  "homepage": "https://github.com/coajs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coajs/coa-tencent-lbs.git"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "rm -rf dist && tsc && cp package.json *.md dist && rm -rf dist/@*",
+    "publish-prerelease": "yarn build && yarn version --prerelease && cp package.json *.md dist && cd dist && rm -rf @* && npm publish"
+  },
+  "dependencies": {
+    "coa-error": "^1.1.3",
+    "coa-helper": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.35",
+    "coa-redis": "^1.3.2",
+    "typescript": "^4.2.3"
+  }
+}
