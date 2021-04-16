@@ -80,19 +80,19 @@ export class CoaTencentLbsService {
       let list = await this.districtList()
       let v0: any = []
       _.forEach(list[0], v1 => {
-        let info1: any = { value: v1['fullname'], children: [] }
+        let info1: any = { value: v1['fullname'], label: v1['fullname'], children: [] }
         // 判断第1层的子
         if (v1['cidx']) {
           let [start1, end1] = v1['cidx']
           for (start1; start1 <= end1; start1++) {
             let v2 = list[1][start1]
-            let info2: any = { value: v2['fullname'], children: [] }
+            let info2: any = { value: v2['fullname'], label: v2['fullname'], children: [] }
             // 判断第2层的子
             if (v2['cidx']) {
               let [start2, end2] = v2['cidx']
               for (start2; start2 <= end2; start2++) {
                 let v3 = list[2][start2]
-                let info3 = { value: v3['fullname'] }
+                let info3 = { value: v3['fullname'], label: v3['fullname'] }
                 info2.children.push(info3)
               }
             }

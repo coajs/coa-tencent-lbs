@@ -1,5 +1,5 @@
 import { CoaError } from 'coa-error'
-import { $, _, axios, Axios } from 'coa-helper'
+import { $, axios, Axios, _ } from 'coa-helper'
 import { RedisCache } from 'coa-redis'
 
 const BaseURL = 'https://apis.map.qq.com/ws'
