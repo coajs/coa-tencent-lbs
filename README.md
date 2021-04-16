@@ -5,7 +5,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/coa-tencent-lbs.svg?style=flat-square)](http://npm-stat.com/charts.html?package=coa-tencent-lbs)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/coajs/coa-tencent-lbs/pulls)
 
-一个超简单的腾讯地图SDK for Node.js
+轻量的腾讯位置服务SDK for Node.js
 
 根据日常实际项目使用进行简单封装
 
